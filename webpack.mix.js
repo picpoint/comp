@@ -11,10 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .less('resources/less/style.less', 'public/css/style.css')
+mix.js('resources/js/test.js', 'public/js')
+    .sass('resources/sass/style.scss', 'public/css/style.css')
     .browserSync({
-        proxy: 'http://127.0.0.1:8000/'
+        proxy: 'http://comp/'
     });
 
 

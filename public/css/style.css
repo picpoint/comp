@@ -1,0 +1,100 @@
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hp {
+  display: flex;
+}
+
+.hp__wrp {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hp__hdrblock {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 15%;
+}
+
+.hp__hdrtop {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
+  background-color: #191970;
+}
+
+.hp__hdrtopwrap {
+  border: 1px solid red;
+  display: flex;
+  width: 85%;
+}
+
+.hp__hdrtopinfo {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.hp__hdrtopinfo a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.hp__hdrtopcontacts {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.hp__hdrtopcontacts span {
+  color: white;
+  margin: 0 5px;
+}
+
+.hp__hdrtopcontacts span:nth-child(1) {
+  font-weight: bold;
+}
+
+.hp__hdrbuttom {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+}
+
+.hp__hdrbuttomwrap {
+  border: 1px solid red;
+  display: flex;
+  width: 85%;
+}
+
+.hp__hdrbuttomlogo {
+  border: 1px solid red;
+  width: 20%;
+}
+
+.hp__hdrbuttomfind {
+  border: 1px solid red;
+  width: 50%;
+}
+
+.hp__hdrbuttomother {
+  border: 1px solid red;
+  width: 30%;
+}
+

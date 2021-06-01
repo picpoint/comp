@@ -1,0 +1,94 @@
+@import "var.scss";
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.hp {
+  //border: 1px solid red;
+  display: flex;
+    &__wrp {
+      border: $border;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+    }
+    &__hdrblock {
+      border: $border;
+      display: flex;
+      flex-direction: column;
+      height: 15%;
+    }
+    &__hdrtop {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      height: 40%;
+      width: 100%;
+      background-color: $phantomeblue;
+    }
+    &__hdrtopwrap {
+      border: $border;
+      display: flex;
+      width: 85%;
+    }
+    &__hdrtopinfo {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+        a {
+          color: white;
+          text-decoration: none;
+          margin: 0 15px;
+        }
+    }
+    &__hdrtopcontacts {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+        span {
+          color: white;
+          margin: 0 5px;
+            &:nth-child(1) {
+              font-weight: bold;
+            }
+        }
+    }
+
+
+    &__hdrbuttom {
+      border: $border;
+      display: flex;
+      justify-content: center;
+      height: 60%;
+      width: 100%;
+    }
+    &__hdrbuttomwrap {
+      border: $border;
+      display: flex;
+      width: 85%;
+    }
+    &__hdrbuttomlogo {
+      border: $border;
+      width: 20%;
+    }
+    &__hdrbuttomfind {
+      border: $border;
+      width: 50%;
+    }
+    &__hdrbuttomother {
+      border: $border;
+      width: 30%;
+    }
+
+
+
+
+}
