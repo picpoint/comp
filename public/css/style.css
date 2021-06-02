@@ -6,19 +6,20 @@ body {
 
 .hp {
   display: flex;
+  height: 100vh;
 }
 
 .hp__wrp {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
 .hp__hdrblock {
   display: flex;
   flex-direction: column;
-  height: 15%;
+  height: 7%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 10px 100px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
@@ -26,7 +27,7 @@ body {
 .hp__hdrtop {
   display: flex;
   justify-content: center;
-  height: 40%;
+  height: 35%;
   width: 100%;
   background-color: #191970;
 }
@@ -68,7 +69,7 @@ body {
 .hp__hdrbuttom {
   display: flex;
   justify-content: center;
-  height: 60%;
+  height: 65%;
   width: 100%;
 }
 
@@ -146,6 +147,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #f7f7f7;
+  height: 88%;
 }
 
 .hp__dbyblockwrap {
@@ -154,7 +156,8 @@ body {
   align-content: flex-start;
   flex-wrap: wrap;
   width: 85%;
-  margin-top: 50px;
+  height: 88%;
+  margin: 50px 0;
 }
 
 .hp__cpu {
@@ -695,5 +698,20 @@ body {
 
 .hp__accessories a span {
   z-index: 10;
+}
+
+.hp__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  background-color: #191970;
+}
+
+.hp__footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  margin: 0 20px;
 }
 

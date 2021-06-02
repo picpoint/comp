@@ -124,6 +124,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="hp__footer">
+                <a href="#">Акции</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Способы оплаты</a>
+                <a href="#">О нас</a>
+            </div>
+
         </div>
     </section>
 
