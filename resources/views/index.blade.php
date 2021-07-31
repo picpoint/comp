@@ -1,139 +1,69 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="/public/css/style.css">
-</head>
-<body>
+@extends('layouts.genlay')
 
-    <section class="hp">
-        <div class="hp__wrp">
-            <div class="hp__hdrblock">
-                <div class="hp__hdrtop">
-                    <div class="hp__hdrtopwrap">
-                        <div class="hp__hdrtopinfo">
-                            <a href="#">Магазины</a>
-                            <a href="#">Покупателям</a>
-                            <a href="#">Доставка</a>
-                            <a href="#">Клуб COMP</a>
-                        </div>
-                        <div class="hp__hdrtopcontacts">
-                            <span>8-800-77-07-88</span>
-                            <span>(с 7:00 до 23:00)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hp__hdrbuttom">
-                    <div class="hp__hdrbuttomwrap">
-                        <div class="hp__hdrbuttomlogo">
-                            <img src="/public/pict/comp.png" alt="logo">
-                        </div>
-                        <div class="hp__hdrbuttomfind">
-                            <form method="post" class="hp__find">
-                                <input type="text" name="find" placeholder="Поиск по сайту">
-                            </form>
-                        </div>
-                        <div class="hp__hdrbuttomother">
-                            <div class="hp__hdrbuttombasket">
-                                <a href="#">Корзина</a>
-                            </div>
-                            <div class="hp__hdrbuttomauth">
-                                <a href="#">Войти</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hp__bdyblock">
-                <div class="hp__dbyblockwrap">
-                    <div class="hp__cpu">
-                        <a href="#">
-                            <img src="/public/pict/cpu.png" alt="cpu">
-                            <span>Процессоры</span>
-                        </a>
-                    </div>
-                    <div class="hp__mbord">
-                        <a href="#">
-                            <img src="/public/pict/mboard.png" alt="mboard">
-                            <span>Метеринские платы</span>
-                        </a>
-                    </div>
-                    <div class="hp__video">
-                        <a href="#">
-                            <img src="/public/pict/video.png" alt="video">
-                            <span>Видеокарты</span>
-                        </a>
-                    </div>
-                    <div class="hp__ram">
-                        <a href="#">
-                            <img src="/public/pict/ram.png" alt="ram">
-                            <span>Оперативная память</span>
-                        </a>
-                    </div>
-                    <div class="hp__power">
-                        <a href="#">
-                            <img src="/public/pict/power.png" alt="power">
-                            <span>Блоки питания</span>
-                        </a>
-                    </div>
-                    <div class="hp__corps">
-                        <a href="#">
-                            <img src="/public/pict/corp.png" alt="corps">
-                            <span>Корпуса</span>
-                        </a>
-                    </div>
-                    <div class="hp__cooling">
-                        <a href="#">
-                            <img src="/public/pict/cooling.png" alt="cooling">
-                            <span>Охлаждение</span>
-                        </a>
-                    </div>
-                    <div class="hp__modding">
-                        <a href="#">
-                            <img src="/public/pict/modding.png" alt="modding">
-                            <span>Обслуживание</span>
-                        </a>
-                    </div>
-                    <div class="hp__ssd">
-                        <a href="#">
-                            <img src="/public/pict/ssd.png" alt="ssd">
-                            <span>SSD Накопители</span>
-                        </a>
-                    </div>
-                    <div class="hp__hdd">
-                        <a href="#">
-                            <img src="/public/pict/hdd.png" alt="hdd">
-                            <span>HDD Накопители</span>
-                        </a>
-                    </div>
-                    <div class="hp__expdevices">
-                        <a href="#">
-                            <img src="/public/pict/exp.png" alt="exp">
-                            <span>Устройства расширения</span>
-                        </a>
-                    </div>
-                    <div class="hp__accessories">
-                        <a href="#">
-                            <img src="/public/pict/access.png" alt="accessories">
-                            <span>Комплектующие</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="hp__footer">
-                <a href="#">Акции</a>
-                <a href="#">Вакансии</a>
-                <a href="#">Способы оплаты</a>
-                <a href="#">О нас</a>
-            </div>
 
+@section('header')
+    @parent
+@endsection
+
+
+@section('bodycntnt')
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Album example</h1>
+
+                <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                <p>
+                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                </p>
+            </div>
         </div>
     </section>
 
-</body>
-</html>
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                @foreach($posts as $post)
+                    <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $post->hdr }}</h5>
+                            <p class="card-text">{{ $post->cntnt }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">
+{{--                                    {{ $post->created_at }}--}}
+{{--                                    {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('d-m-Y') }}--}}
+                                    {{ $post->dateTimeFormat() }}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+
+                <div class="container">
+                    {{ $posts->appends(['go' => request()->go, 'boo' => request()->boo])->onEachSide(1)->links() }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+@endsection
